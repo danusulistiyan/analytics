@@ -30,6 +30,7 @@
 		658211AF2093574D00F6A874 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658211AE2093574D00F6A874 /* SettingViewController.swift */; };
 		658211B02093574D00F6A874 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658211AE2093574D00F6A874 /* SettingViewController.swift */; };
 		658211B12093574D00F6A874 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658211AE2093574D00F6A874 /* SettingViewController.swift */; };
+		BF086C3F20B80577008977D8 /* bgdt.png in Resources */ = {isa = PBXBuildFile; fileRef = BF086C3E20B80577008977D8 /* bgdt.png */; };
 		BF5778702089E244009CFFEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF57786F2089E244009CFFEC /* AppDelegate.swift */; };
 		BF5778722089E244009CFFEC /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5778712089E244009CFFEC /* HomeController.swift */; };
 		BF5778752089E244009CFFEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5778732089E244009CFFEC /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		BF9B21F920A00A1E008AAB1A /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B21F820A00A1E008AAB1A /* LoginTextField.swift */; };
 		BF9B21FB20A00A36008AAB1A /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B21FA20A00A36008AAB1A /* LoginButton.swift */; };
 		BF9B21FD20A04BF6008AAB1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9B21FC20A04BF6008AAB1A /* LoginViewController.swift */; };
+		BFA3F36A20B258A700B3DE2D /* kf_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = BFA3F36920B258A700B3DE2D /* kf_bg.png */; };
 		DE8D458FE6D7B4534E247EE5 /* Pods_AnalyticsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE0DC31DFC5A780D374FE2C /* Pods_AnalyticsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,7 @@
 		658211AE2093574D00F6A874 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		860CAA53B4B7540331645CA4 /* Pods-AnalyticsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsUITests/Pods-AnalyticsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AACF5FD6DC5DBB7D539F511B /* Pods-AnalyticsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsUITests/Pods-AnalyticsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF086C3E20B80577008977D8 /* bgdt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bgdt.png; path = ../../../../../Pictures/bgdt.png; sourceTree = "<group>"; };
 		BF57786C2089E244009CFFEC /* Analytics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Analytics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF57786F2089E244009CFFEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF5778712089E244009CFFEC /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		BF9B21F820A00A1E008AAB1A /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTextField.swift; path = "../../../../login-screen-swift-master/LoginScreen/LoginScreen/Interface/LoginTextField.swift"; sourceTree = "<group>"; };
 		BF9B21FA20A00A36008AAB1A /* LoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginButton.swift; path = "../../../../login-screen-swift-master/LoginScreen/LoginScreen/Interface/LoginButton.swift"; sourceTree = "<group>"; };
 		BF9B21FC20A04BF6008AAB1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BFA3F36920B258A700B3DE2D /* kf_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kf_bg.png; path = ../../../../kf_bg.png; sourceTree = "<group>"; };
 		C3BA9F381DFC4FDC8B4ECAC1 /* Pods_AnalyticsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B6C5F5306023AC43BA0276 /* Pods-AnalyticsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticsTests/Pods-AnalyticsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +158,8 @@
 		6582119A209353A700F6A874 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFA3F36920B258A700B3DE2D /* kf_bg.png */,
+				BF086C3E20B80577008977D8 /* bgdt.png */,
 				6582119B209353B200F6A874 /* home_icon_left_menu@2x.png */,
 				6582119C209353B200F6A874 /* home_icon_left_menu@3x.png */,
 			);
@@ -366,6 +372,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF57787A2089E245009CFFEC /* LaunchScreen.storyboard in Resources */,
+				BFA3F36A20B258A700B3DE2D /* kf_bg.png in Resources */,
+				BF086C3F20B80577008977D8 /* bgdt.png in Resources */,
 				BF5778772089E245009CFFEC /* Assets.xcassets in Resources */,
 				6582119D209353B300F6A874 /* home_icon_left_menu@2x.png in Resources */,
 				BF5778752089E244009CFFEC /* Main.storyboard in Resources */,
@@ -437,10 +445,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Analytics/Pods-Analytics-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZUW88WKUJ;
+				DEVELOPMENT_TEAM = 445T976K6Y;
 				INFOPLIST_FILE = Analytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -686,7 +696,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZUW88WKUJ;
+				DEVELOPMENT_TEAM = 445T976K6Y;
 				INFOPLIST_FILE = Analytics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,18 +10,17 @@ import UIKit
 import MMDrawerController
 import WebKit
 
-class HomeController: UIViewController, WKNavigationDelegate, UIWebViewDelegate{
+class HomeController: UIViewController, WKNavigationDelegate, UIWebViewDelegate {
+    @IBOutlet weak var webView: UIWebView!
     
-    var webView: WKWebView!
-    
-    override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.checkLogin();
+        
+        
+        
+        
 //        NotificationCenter.default.addObserver(self, selector: #selector(HomeController.rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "home_icon_left_menu"), style: .plain, target: self, action: #selector(actionMenu(sender:)))
         self.navigationController?.navigationBar.barTintColor = UIColor.white
@@ -33,13 +32,12 @@ class HomeController: UIViewController, WKNavigationDelegate, UIWebViewDelegate{
 //        myWebView.loadRequest(request)
 
         
-        let url = URL(string: "https://analytics.admedika.co.id/peruri/DASHBOARD3-1.php")!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
-        webView.isUserInteractionEnabled = true
-        webView.frame.size.height = 1.5
-        webView.frame.size = webView.sizeThatFits(CGSize.zero)
-        webView.scrollView.isScrollEnabled=true
+//        webView.allowsBackForwardNavigationGestures = true
+//        webView.isUserInteractionEnabled = true
+//        webView.frame.size.height = 1.5
+        webView.delegate = self;
+//        webView.frame.size = webView.sizeThatFits(CGSize.zero)
+//        webView.scrollView.isScrollEnabled=true
         navigationController?.hidesBarsOnSwipe = true
     }
     
@@ -59,6 +57,15 @@ class HomeController: UIViewController, WKNavigationDelegate, UIWebViewDelegate{
         let drawerController = self.parent?.parent as! MMDrawerController;
         drawerController.openDrawerGestureModeMask = .all
         drawerController.closeDrawerGestureModeMask = .all
+        
+        let name = UserDefaults.standard.string(forKey: "username");
+        if (name == "devbigdata"){
+            self.actionMenu("https://analytics.admedika.co.id/kfmobile/dashboard7_1.php")
+        } else if (name == "vassequis"){
+            self.actionMenu("https://analytics.admedika.co.id/vasmobile/dashboard1.php")
+        }
+        
+//       self.navigationController?.navigationBar.isHidden = true
     }
     
     
@@ -76,10 +83,35 @@ class HomeController: UIViewController, WKNavigationDelegate, UIWebViewDelegate{
     }
     
     
+    //MARK: Menu
+    func actionMenu(_ urlString: String) {
+        let url = URL(string: urlString)!
+        webView.loadRequest(URLRequest(url: url))
+    }
+    
+    
+    //MARK: Method
+    func checkLogin() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = sb.instantiateViewController(withIdentifier: "loginStoryID")
+        self.present(loginVC, animated: true, completion: nil);
+        
+        
+//        self.performSegue(withIdentifier: "presentLogin", sender: nil)
+    }
+    
     //MARK: Action
     @objc func actionMenu(sender: UIBarButtonItem) {
         let drawerController = self.parent?.parent as! MMDrawerController;
         drawerController.toggle(.left, animated: true, completion: nil);
+    }
+    
+    
+    //MARK: UIWebViewDelegate
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        print("hide loading");
+//        webView.reload()
+        webView.scalesPageToFit = true
     }
 }
 

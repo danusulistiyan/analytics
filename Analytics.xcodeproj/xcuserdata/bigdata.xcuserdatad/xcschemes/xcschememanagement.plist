@@ -7,7 +7,25 @@
 		<key>Analytics.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>BF57786B2089E244009CFFEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF57787F2089E245009CFFEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF57788A2089E245009CFFEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

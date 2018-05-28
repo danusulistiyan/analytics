@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var centerContainer: MMDrawerController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        print(UserDefaults.standard.value(forKey: "isLogin"));
+//        
+        UserDefaults.standard.set(false, forKey: "isLogin");
+        UserDefaults.standard.synchronize();
+//
+//        print(UserDefaults.standard.value(forKey: "isLogin"));
+        
         
         return true
     }

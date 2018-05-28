@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Ue-r0-4hw">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,34 +15,28 @@
             <objects>
                 <viewController storyboardIdentifier="homeID" modalTransitionStyle="flipHorizontal" modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="HomeController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKe-S6-FMS">
-                                <rect key="frame" x="167" y="88" width="40" height="30"/>
-                                <state key="normal" title="Detail"/>
-                                <connections>
-                                    <segue destination="qR3-1L-n7O" kind="show" id="Po9-Yn-YgO"/>
-                                </connections>
-                            </button>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rmc-Hv-ao3">
-                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpA-p4-vxu">
+                                <rect key="frame" x="0.0" y="32" width="667" height="343"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FKe-S6-FMS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Sn-7d-WXv"/>
-                            <constraint firstItem="FKe-S6-FMS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4l3-AM-cJD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FpA-p4-vxu" secondAttribute="bottom" id="BPH-Ih-Oh4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FpA-p4-vxu" secondAttribute="trailing" id="GNg-vq-tlt"/>
+                            <constraint firstItem="FpA-p4-vxu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TPg-eg-Hs5"/>
+                            <constraint firstItem="FpA-p4-vxu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="veF-uR-UpY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8WK-6h-bBe"/>
                     <connections>
+                        <outlet property="webView" destination="FpA-p4-vxu" id="Xi8-58-xwP"/>
                         <segue destination="1ie-1E-zLb" kind="show" identifier="aboutSegue" id="0Do-yL-TYx"/>
                         <segue destination="N8L-tN-Duo" kind="show" identifier="settingSegue" id="0V0-T9-WcY"/>
-                        <segue destination="fw8-NK-4di" kind="presentation" identifier="loginview" id="xZw-WO-UHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,11 +48,11 @@
             <objects>
                 <viewController storyboardIdentifier="detailID" id="qR3-1L-n7O" customClass="DetailViewController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KNy-3x-dxo">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDC-8Z-0Wa">
-                                <rect key="frame" x="313" y="196.66666666666666" width="110" height="21"/>
+                                <rect key="frame" x="278.5" y="177" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -81,19 +75,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="menuID" id="wJT-20-H7u" customClass="MenuTableViewController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wEG-ay-deP">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="rvO-oj-RSC">
-                                <rect key="frame" x="0.0" y="28" width="736" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="667" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvO-oj-RSC" id="8cC-hT-U6j">
-                                    <rect key="frame" x="0.0" y="0.0" width="736" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADS-WK-ifA">
-                                            <rect key="frame" x="10" y="10.000000000000002" width="716" height="23.666666666666671"/>
+                                            <rect key="frame" x="10" y="10" width="647" height="23.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -117,14 +111,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ij-vX-LZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="276" y="809"/>
+            <point key="canvasLocation" x="429" y="978"/>
         </scene>
         <!--Drawer Analytic View Controller-->
         <scene sceneID="181-ti-Jkr">
             <objects>
                 <viewController id="2Ue-r0-4hw" customClass="DrawerAnalyticViewController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0vu-Hh-oH1">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ehS-Vp-JkQ"/>
@@ -138,41 +132,75 @@
         <!--Login View Controller-->
         <scene sceneID="RGY-cP-VY0">
             <objects>
-                <viewController id="fw8-NK-4di" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginStoryID" id="fw8-NK-4di" customClass="LoginViewController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rEz-SO-ten" customClass="LoginButton" customModule="Analytics" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fR-dO-C4N" customClass="LoginTextField" customModule="Analytics" customModuleProvider="target">
-                                <rect key="frame" x="254" y="159" width="238" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="PASSWORD"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjM-3U-p9T" customClass="LoginButton" customModule="Analytics" customModuleProvider="target">
-                                <rect key="frame" x="254" y="213" width="244" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="LOGIN"/>
-                                <state key="normal" title="Login"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kbR-DE-fVP" customClass="LoginTextField" customModule="Analytics" customModuleProvider="target">
-                                <rect key="frame" x="254" y="104" width="244" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" hint="USERNAME"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-lc-6bU">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQd-D8-mjv">
+                                <rect key="frame" x="0.0" y="6" width="667" height="369"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9fR-dO-C4N" customClass="LoginTextField" customModule="Analytics" customModuleProvider="target">
+                                        <rect key="frame" x="214" y="215" width="244" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" hint="PASSWORD"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldDidEnd:" destination="fw8-NK-4di" eventType="editingDidEnd" id="FZG-lR-5Vj"/>
+                                            <outlet property="delegate" destination="rEz-SO-ten" id="RE1-PY-qgQ"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjM-3U-p9T" customClass="LoginButton" customModule="Analytics" customModuleProvider="target">
+                                        <rect key="frame" x="214" y="258" width="244" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" hint="LOGIN"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionLogin:" destination="fw8-NK-4di" eventType="touchUpInside" id="y6m-7f-8ky"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kbR-DE-fVP">
+                                        <rect key="frame" x="214" y="177" width="244" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" hint="USERNAME"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBf-zy-qIb">
+                                        <rect key="frame" x="208" y="26" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HQd-D8-mjv" firstAttribute="top" secondItem="aer-qD-Dzs" secondAttribute="top" id="0vn-Bq-mg3"/>
+                            <constraint firstItem="aer-qD-Dzs" firstAttribute="bottom" secondItem="Rfv-lc-6bU" secondAttribute="bottom" id="4QD-lK-fX8"/>
+                            <constraint firstItem="Rfv-lc-6bU" firstAttribute="top" secondItem="aer-qD-Dzs" secondAttribute="top" id="XZf-0t-N5P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aer-qD-Dzs"/>
                     </view>
+                    <connections>
+                        <outlet property="btnLogin" destination="EjM-3U-p9T" id="xaw-kV-wgn"/>
+                        <outlet property="ivhome" destination="LBf-zy-qIb" id="Njy-gH-pVD"/>
+                        <outlet property="scrview" destination="Rfv-lc-6bU" id="uOS-Bm-Z9l"/>
+                        <outlet property="tfPassword" destination="9fR-dO-C4N" id="KxQ-ft-bnb"/>
+                        <outlet property="tfUserName" destination="kbR-DE-fVP" id="1d7-6h-Uz8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSS-wp-yxU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773" y="1241"/>
+            <point key="canvasLocation" x="1772.5637181409297" y="1240.8"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e5d-dk-djh">
@@ -180,7 +208,7 @@
                 <navigationController storyboardIdentifier="rootID" automaticallyAdjustsScrollViewInsets="NO" id="Ytt-A3-9UM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yue-9I-Io7">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -197,7 +225,7 @@
             <objects>
                 <viewController storyboardIdentifier="aboutID" modalPresentationStyle="overFullScreen" id="1ie-1E-zLb" customClass="AboutViewController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfA-GO-MWI">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHZ-tk-5aU">
@@ -219,7 +247,7 @@
             <objects>
                 <viewController storyboardIdentifier="settingID" id="N8L-tN-Duo" customClass="SettingViewController" customModule="Analytics" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LYD-OX-9rp">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZf-91-XS9">
